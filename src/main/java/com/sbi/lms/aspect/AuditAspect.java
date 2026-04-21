@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
+// sample comment 1
+// sample comment 2
 
 import java.time.Instant;
 

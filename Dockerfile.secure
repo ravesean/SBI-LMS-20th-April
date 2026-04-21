@@ -12,6 +12,10 @@
 # ── Stage 1: Build ────────────────────────────────────────────
 # Full JDK + Maven used only here — never reaches the final image
 FROM eclipse-temurin:17-jdk-alpine AS build
+
+# Install Maven (not bundled with eclipse-temurin)
+RUN apk add --no-cache maven
+
 WORKDIR /workspace
 
 # Copy pom.xml first — dependency layer cached separately from source
@@ -51,3 +55,5 @@ ENTRYPOINT ["java", \
   "-XX:MaxRAMPercentage=75.0", \
   "-Djava.security.egd=file:/dev/./urandom", \
   "-jar", "app.jar"]
+
+  

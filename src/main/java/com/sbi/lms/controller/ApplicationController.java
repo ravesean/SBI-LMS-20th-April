@@ -77,11 +77,12 @@ public class ApplicationController {
     @GetMapping("/{id}")
     @Operation(summary = "Get application by ID")
     // LAB 1: @PreAuthorize is intentionally missing here — SonarQube will catch it
+    @PreAuthorize("hasAnyRole('MANAGER','OFFICER')")
     public ResponseEntity<LoanApplicationDTO> getById(@PathVariable Long id, Authentication auth) {
         LoanApplication app = applicationService.findById(id);
         LoanApplicationDTO dto = applicationService.toDto(app);
         // LAB 1 FIX: uncomment the line below after adding @PreAuthorize
-        // dto = maskPiiIfOfficer(dto, auth);
+        dto = maskPiiIfOfficer(dto, auth);
         return ResponseEntity.ok(dto);
     }
 
