@@ -63,7 +63,6 @@ jobs:
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: |
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-            -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.projectKey=vaman-pundit_sbi-dev-sec-ops-20-april-2026 \
             -Dsonar.qualitygate.wait=true \
             -Dsonar.qualitygate.timeout=300

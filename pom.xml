@@ -24,7 +24,6 @@
         <sonar.organization>vaman-pundit</sonar.organization>
         <sonar.projectKey>vaman-pundit_sbi-dev-sec-ops-20-april-2026</sonar.projectKey>
         <sonar.projectName>SBI Loan Management System</sonar.projectName>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>   
         <sonar.java.source>17</sonar.java.source>
         <sonar.exclusions>**/test/**,**/generated/**</sonar.exclusions>
     </properties>
