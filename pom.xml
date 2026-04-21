@@ -23,6 +23,7 @@
         <sonar.host.url>https://sonarcloud.io/</sonar.host.url>
         <sonar.projectKey>ravesean_SBI-LMS-20th-April</sonar.projectKey>
         <sonar.projectName>SBI Loan Management System</sonar.projectName>
+        <sonar.organization>rsr-org</sonar.organization>
         <sonar.java.source>17</sonar.java.source>
         <sonar.exclusions>**/test/**,**/generated/**</sonar.exclusions>
     </properties>
