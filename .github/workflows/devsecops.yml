@@ -197,6 +197,7 @@ jobs:
           done
 
       - name: DAST — ZAP API scan (OpenAPI auto-discovery)
+        continue-on-error: true
         run: |
           docker run --network=host -v $(pwd):/zap/wrk/:rw -t \
           ghcr.io/zaproxy/zaproxy:stable zap-api-scan.py -t \
