@@ -39,6 +39,7 @@ public class AuthController {
         this.jwtUtils        = jwtUtils;
     }
 
+
     @PostMapping("/login")
     @Operation(summary = "Login and receive JWT token")
     public ResponseEntity<?> login(@Valid @RequestBody LoginRequest req) {
