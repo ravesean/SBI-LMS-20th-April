@@ -202,9 +202,9 @@ jobs:
           docker run --network=host -v $(pwd):/zap/wrk/:rw -t \
           ghcr.io/zaproxy/zaproxy:stable zap-api-scan.py -t \
           http://localhost:8080/v3/api-docs -f openapi \
-          -r zap-report.html \
-          -I   # do not fail build on alerts — review report manually in lab
+          -r zap-report.html -I  
 
+          
       - uses: actions/upload-artifact@v4
         if: always()
         with:
