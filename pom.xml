@@ -18,12 +18,12 @@
     <description>DevSecOps Training Project — SBI LMS</description>
 
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
         <!-- SonarQube configuration — update SONAR_SERVER_IP before scanning -->
         <sonar.host.url>https://sonarcloud.io/</sonar.host.url>
         <sonar.projectKey>SBI-LMS-20th-April</sonar.projectKey>
         <sonar.projectName>SBI Loan Management System</sonar.projectName>
-        <sonar.java.source>21</sonar.java.source>
+        <sonar.java.source>17</sonar.java.source>
         <sonar.exclusions>**/test/**,**/generated/**</sonar.exclusions>
     </properties>
 
