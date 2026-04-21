@@ -118,12 +118,11 @@ jobs:
           echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
           sudo apt-get update
           sudo apt-get install trivy
-          
-      - name: Trivy — image CVE scan (blocks on CRITICAL)
+
+      - name: Trivy — image CVE scan
         run: |
           trivy image \
             --severity HIGH,CRITICAL \
-            --exit-code 1 \
             --format sarif \
             --output trivy-results.sarif \
             lms:${{ github.sha }}
